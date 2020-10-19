@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">https://sky90.lss.emc.com:8443</domain>
+        <trust-anchors>
+            <certificates src="../@raw/cert.pem"/>
+            <certificates src="../@raw/ppdmbase64cert.pem"/>
+            <certificates src="../@raw/ppdmcryptocert.pem"/>
+            <certificates src="../@raw/ppdm.pem"/>
+             <certificates src="system"/>
+             <certificates src="user"/>
+             <pin-set>
+            <pin digest="SHA-256">XgFC8V0eHS4BSyBq7Hbt+eZuyGPHwvXQyUDStqfL+XA=</pin>
+        </pin-set>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
